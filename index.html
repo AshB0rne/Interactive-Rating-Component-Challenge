@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Rating Component Challenge</title>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="http://127.0.0.1:5500/interactive-rating%20Challenge/thank-you-state.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="inner-wrapper">
+      <div class="upper-part">
+        <span><img src="images/icon-star.svg" alt="star icon"></span>
+      </div>
+      <div class="middle-part">
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support<br> request. All feedback is appreciated to help us<br>improve our offering!</p>
+
+        <div class="button-container">
+          <button onclick="
+            document.querySelector('.stars-decider').innerText = '1';
+          ">1</button>
+
+          <button onclick="
+            document.querySelector('.stars-decider').innerText = '2';
+          ">2</button>
+  
+          <button onclick="
+            document.querySelector('.stars-decider').innerText = '3';
+          ">3</button>
+  
+          <button onclick="
+            document.querySelector('.stars-decider').innerText = '4';
+          ">4</button>
+  
+          <button onclick="
+            document.querySelector('.stars-decider').innerText = '5';
+          ">5</button>
+        </div>
+        
+      </div>
+      <div class="lower-part">
+          <button id="submitButton">Submit</button>
+      </div>
+    </div>
+
+    <!-- thank you state starts -->
+
+    <div class="thank-you-state-wrapper" id="tystateWrapper">
+      <div class="tystate-inner-wrapper">
+        <div class="tystate-upper-part">
+          <img src="images/illustration-thank-you.svg" alt="thank you state image">
+          <div id="div">You selected <span class="stars-decider"></span> out of 5</div>
+        </div>
+        <div class="tystate-lower-part">
+          <h1>Thank you!</h1>
+          <p>
+            We appreciate you taking the time to give a rating.<br>
+            if you ever need more support, don't hesitate to<br>
+            get in touch!
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
