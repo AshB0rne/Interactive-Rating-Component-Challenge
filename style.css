@@ -6,33 +6,50 @@
   color: hsl(0, 0%, 100%);
 }
 body {
+  position: relative;
   background: hsl(216, 12%, 8%);
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   justify-content: center;
   align-items: center;
 }
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* error message */
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+/* rating state */
+
 .inner-wrapper {
   padding: 30px;
   background: hsl(210, 24%, 13%);
   border-radius: 30px;
-  z-index: 5;
-}
-.inactive-inner-wrapper {
-  opacity: 0;
-  z-index: -5;
 }
 .upper-part {
   display: flex;
   margin-bottom: 25px;
+  gap: 10px;
+}
+.upper-part .star1 {
+  display: flex;
 }
 .upper-part span {
-  padding: 13px;
-  border-radius: 50%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  background: hsl(211, 24%, 17%);
+  transition: 0.3s;
 }
 .middle-part {
   margin-bottom: 20px;
@@ -49,6 +66,7 @@ body {
   font-size: 15px;
   font-weight: 400;
   color: hsl(217, 12%, 63%);
+  width: 350px;
   margin-bottom: 20px;
 }
 .button-container {
@@ -69,7 +87,7 @@ body {
   font-weight: 400;
   background: hsl(213, 17%, 21%);
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 .middle-part button:hover {
   color: white;
@@ -91,23 +109,22 @@ body {
   width: 100%;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 .lower-part button:hover {
   color: hsl(25, 97%, 53%);
   background: hsl(0, 0%, 100%);
 }
 
-/* Thank You State design start */
+/* Thank You State */
 
 .thank-you-state-wrapper {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: absolute;
   height: 100%;
   width: 100%;
-  opacity: 0;
 }
 .tystate-inner-wrapper {
   display: flex;
@@ -153,3 +170,14 @@ body {
   color: hsl(217, 12%, 63%);
 }
 
+/* for responsive design */
+
+@media screen and (max-width: 375px) 
+{
+  body {
+    padding: 20px;
+  }
+  p {
+    width: 300px;
+  }
+}
